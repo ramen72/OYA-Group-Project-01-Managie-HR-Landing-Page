@@ -1,0 +1,180 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+:root{
+    --inter: "Inter", sans-serif;
+    --Space: "Space Grotesk", sans-serif;
+    --defaultSize: 18px;
+    --defaultColor: #232323;
+}
+body{
+    font-family: var(--inter);
+    font-size: var(--defaultSize);
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px dotted green;
+}
+span{
+    display: inline-block;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+p{
+    font-weight: 400;
+    line-height: 1.70;
+    color: var(--defaultColor);
+    letter-spacing: -0.45px;    
+}
+ol,ul{
+    list-style-type: none;
+}
+.dGrid{
+    display: grid;
+}
+.commonBtn{
+    font-weight: 500;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 16px 40px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.commonBtn:hover{
+    background-color: #fff;
+    color: #394792;
+}
+
+/* Nav Start */
+#nav {
+    width: 100%;
+    background: #394792;
+    padding: 16px 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    z-index: 999999999;
+}
+#nav .dGrid{
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    align-items: center;
+}
+#nav .dGrid ul{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 60px;
+    text-transform: capitalize;
+}
+#nav .dGrid ul li a{
+    color: #fff;
+    position: relative;
+}
+#nav .dGrid .navBtn a:first-child{
+    border: 0;
+}
+#nav .dGrid ul li a::after{
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+}
+#nav .dGrid ul li:hover a::after{
+    width: 100%;
+    cursor: pointer;
+}
+/* Nav End */
+
+/* Banner Start */
+#banner{
+    background-color: #394792;
+    padding-top: 210px;
+    padding-bottom: 107px;
+}
+#banner .dGrid{
+    grid-template-columns: repeat(1200, 1fr);
+    justify-content: space-between;
+    align-items: end;
+}
+#banner .dGrid .left{
+    grid-column: span 670;
+}
+#banner .dGrid .right{
+    grid-column: span 530;
+}
+#banner .title{
+    font-family: var(--Space);
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1.20;
+    letter-spacing: -5px;
+    color: #fff;
+}
+#banner .dGrid .left p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding-right: 13%;
+}
+#banner .bnnerBtn .commonBtn:first-child{
+    margin-right: 24px;
+    color: #394792;
+    background: #fff;
+}
+#banner .dGrid .left .counter{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: start;
+    column-gap: 80px;
+    margin-top: 80px;
+    color: #fff;
+}
+#banner .dGrid .left .counter .counterItem h3{
+    font-family: var(--Space);
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: -.4px;
+}
+#banner .dGrid .left .counter .counterItem span{
+    line-height: 1.5;
+    letter-spacing: -0.45px;
+    color: rgba(255, 255, 255, 0.8);
+}
+#banner .dGrid .right .bannerImage {
+    width: 100%;
+    height: auto;
+    margin-bottom: -15px;
+}
+/* Banner End */
